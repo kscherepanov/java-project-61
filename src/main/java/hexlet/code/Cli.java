@@ -47,7 +47,7 @@ public class Cli {
             case GCD_GAME_MENU_INDEX -> Engine.run(scanner, new GCDGame());
             case PROGRESSION_GAME_MENU_INDEX -> Engine.run(scanner, new ProgressionGame());
             case PRIME_GAME_MENU_INDEX -> Engine.run(scanner, new PrimeGame());
-            default -> { }
+            //default -> { }
         }
 
         scanner.close();
