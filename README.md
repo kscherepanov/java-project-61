@@ -1,6 +1,7 @@
 asciinema
 1. [EvenGame](https://asciinema.org/a/ONZd7h0AejWYeTGKDJ4EZS6lk)
 2. [CalcGame](https://asciinema.org/a/DHZ7hCFt8QDc583iqgLfLOtp8)
+3. [GCDGame](https://asciinema.org/a/6YZn1Ij3dmrBRxc9gaNk4lwg2)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kscherepanov/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kscherepanov/java-project-61/actions)
