@@ -14,7 +14,7 @@ public class GCDGame implements Game {
 
     @Override
     public GameRoundDataDto generateRound() {
-        var a =   random.nextInt(100) + 1;
+        var a = random.nextInt(100) + 1;
         var b = random.nextInt(100) + 1;
         var answer = getGcd(a, b);
 

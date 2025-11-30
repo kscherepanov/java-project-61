@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
+import hexlet.code.games.ProgressionGame;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -12,6 +13,7 @@ public class Cli {
     private static final int EVEN_GAME_MENU_INDEX = 2;
     private static final int CALC_GAME_MENU_INDEX = 3;
     private static final int GCD_GAME_MENU_INDEX = 4;
+    private static final int PROGRESSION_GAME_MENU_INDEX = 5;
 
     private static final Map<Integer, String> MENU_ITEMS = new LinkedHashMap<>();
 
@@ -20,6 +22,7 @@ public class Cli {
         MENU_ITEMS.put(EVEN_GAME_MENU_INDEX, "Even");
         MENU_ITEMS.put(CALC_GAME_MENU_INDEX, "Calc");
         MENU_ITEMS.put(GCD_GAME_MENU_INDEX, "GCD");
+        MENU_ITEMS.put(PROGRESSION_GAME_MENU_INDEX, "Progression");
         MENU_ITEMS.put(0, "Exit");
     }
 
@@ -35,17 +38,11 @@ public class Cli {
 
         var menuChoice = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-
-        var userName = scanner.nextLine();
-
-        System.out.println("Hello, " + userName + "!");
-
         switch (menuChoice) {
-            case EVEN_GAME_MENU_INDEX -> Engine.run(scanner, new EvenGame(), userName);
-            case CALC_GAME_MENU_INDEX -> Engine.run(scanner, new CalcGame(), userName);
-            case GCD_GAME_MENU_INDEX -> Engine.run(scanner, new GCDGame(), userName);
+            case EVEN_GAME_MENU_INDEX -> Engine.run(scanner, new EvenGame());
+            case CALC_GAME_MENU_INDEX -> Engine.run(scanner, new CalcGame());
+            case GCD_GAME_MENU_INDEX -> Engine.run(scanner, new GCDGame());
+            case PROGRESSION_GAME_MENU_INDEX -> Engine.run(scanner, new ProgressionGame());
         }
 
         scanner.close();
