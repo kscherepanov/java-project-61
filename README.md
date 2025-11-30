@@ -3,6 +3,7 @@ asciinema
 2. [CalcGame](https://asciinema.org/a/DHZ7hCFt8QDc583iqgLfLOtp8)
 3. [GCDGame](https://asciinema.org/a/6YZn1Ij3dmrBRxc9gaNk4lwg2)
 4. [ProgressionGame](https://asciinema.org/a/OpmWdQubhltKDdCdFtXdpW1En)
+5. [PrimeGame](https://asciinema.org/a/8dY1S1CdBB14VUxaAAldTQlYp)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kscherepanov/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kscherepanov/java-project-61/actions)

@@ -14,7 +14,7 @@ public class ProgressionGame implements Game {
     private static final int MIN_STEP = 1;
     private static final int MAX_STEP = 5;
 
-    protected final Random random = new Random();
+    private final Random random = new Random();
 
     @Override
     public String getInstruction() {

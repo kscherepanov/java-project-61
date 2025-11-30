@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class EvenGame implements Game {
 
-    protected final Random random = new Random();
+    private final Random random = new Random();
 
     @Override
     public String getInstruction() {
