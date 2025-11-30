@@ -1,55 +1,25 @@
 package hexlet.code.games;
 
+import hexlet.code.dto.GameRoundDataDto;
 import java.util.Random;
-import java.util.Scanner;
 
-public class EvenGame {
+public class EvenGame implements Game {
 
-    private static final int ROUNDS_COUNT = 3;
+    protected final Random random = new Random();
 
-    private final Random random = new Random();
-
-    private final Scanner scanner;
-    private final String userName;
-
-    public EvenGame(
-        Scanner scanner,
-        String userName
-    ) {
-        this.scanner = scanner;
-        this.userName = userName;
+    @Override
+    public String getInstruction() {
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
-    public void run() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    @Override
+    public GameRoundDataDto generateRound() {
+        var question = random.nextInt(100) + 1;
+        var answer = question % 2 == 0 ? "yes" : "no";
 
-        for (int i = 0; i < ROUNDS_COUNT; i++) {
-            var number = random.nextInt(100) + 1;
-
-            System.out.println("Question: " + number);
-            System.out.print("Your answer: ");
-
-            var userAnswer = scanner.nextLine().trim().toLowerCase();
-            var correctAnswer = getCorrectAnswer(number);
-
-            if (userAnswer.equals(correctAnswer)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.printf(
-                    "'%s' is wrong answer ;(. Correct answer was '%s'.\n",
-                    userAnswer,
-                    correctAnswer
-                );
-                System.out.printf("Let's try again, %s!", userName);
-
-                return;
-            }
-        }
-
-        System.out.println("Congratulations, " + userName + "!");
-    }
-
-    private String getCorrectAnswer(int number) {
-        return number % 2 == 0 ? "yes" : "no";
+        return new GameRoundDataDto(
+            String.valueOf(question),
+            answer
+        );
     }
 }

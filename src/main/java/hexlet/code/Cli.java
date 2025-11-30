@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -8,12 +9,14 @@ import java.util.Scanner;
 public class Cli {
 
     private static final int EVEN_GAME_MENU_INDEX = 2;
+    private static final int CALC_GAME_MENU_INDEX = 3;
 
     private static final Map<Integer, String> MENU_ITEMS = new LinkedHashMap<>();
 
     static {
-        MENU_ITEMS.put(EVEN_GAME_MENU_INDEX, "Even");
         MENU_ITEMS.put(1, "Greet");
+        MENU_ITEMS.put(EVEN_GAME_MENU_INDEX, "Even");
+        MENU_ITEMS.put(CALC_GAME_MENU_INDEX, "Calc");
         MENU_ITEMS.put(0, "Exit");
     }
 
@@ -37,7 +40,10 @@ public class Cli {
         System.out.println("Hello, " + userName + "!");
 
         if (menuChoice == EVEN_GAME_MENU_INDEX) {
-            new EvenGame(scanner, userName).run();
+            Engine.run(scanner, new EvenGame(), userName);
+        }
+        if (menuChoice == CALC_GAME_MENU_INDEX) {
+            Engine.run(scanner, new CalcGame(), userName);
         }
 
         scanner.close();
