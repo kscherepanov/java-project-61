@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.dto.GameRoundDataDto;
 import java.util.Random;
 
-public class PrimeGame implements Game {
+public final class PrimeGame implements Game {
 
     private final Random random = new Random();
 

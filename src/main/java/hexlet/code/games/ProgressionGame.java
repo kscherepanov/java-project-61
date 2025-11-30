@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.dto.GameRoundDataDto;
 import java.util.Random;
 
-public class ProgressionGame implements Game {
+public final class ProgressionGame implements Game {
 
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;

@@ -3,9 +3,11 @@ package hexlet.code.games;
 import hexlet.code.dto.GameRoundDataDto;
 import java.util.Random;
 
-public class EvenGame implements Game {
+public final class EvenGame implements Game {
 
     private final Random random = new Random();
+
+    private static final int MAX_NUMBER = 10;
 
     @Override
     public String getInstruction() {
@@ -14,7 +16,7 @@ public class EvenGame implements Game {
 
     @Override
     public GameRoundDataDto generateRound() {
-        var question = random.nextInt(100) + 1;
+        var question = random.nextInt(MAX_NUMBER) + 1;
         var answer = question % 2 == 0 ? "yes" : "no";
 
         return new GameRoundDataDto(

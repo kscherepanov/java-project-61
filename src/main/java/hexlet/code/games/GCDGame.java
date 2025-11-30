@@ -3,9 +3,12 @@ package hexlet.code.games;
 import hexlet.code.dto.GameRoundDataDto;
 import java.util.Random;
 
-public class GCDGame implements Game {
+public final class GCDGame implements Game {
 
     private final Random random = new Random();
+
+    private static final int MAX_A_VALUE = 100;
+    private static final int MAX_B_VALUE = 100;
 
     @Override
     public String getInstruction() {
@@ -14,8 +17,8 @@ public class GCDGame implements Game {
 
     @Override
     public GameRoundDataDto generateRound() {
-        var a = random.nextInt(100) + 1;
-        var b = random.nextInt(100) + 1;
+        var a = random.nextInt(MAX_A_VALUE) + 1;
+        var b = random.nextInt(MAX_B_VALUE) + 1;
         var answer = getGcd(a, b);
 
         return new GameRoundDataDto(
