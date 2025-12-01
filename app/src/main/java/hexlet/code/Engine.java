@@ -37,5 +37,7 @@ public class Engine {
                 return;
             }
         }
+
+        System.out.printf("Congratulations, %s!\n", userName);
     }
 }
