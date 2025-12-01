@@ -5,9 +5,8 @@ import java.util.Random;
 
 public final class EvenGame implements Game {
 
-    private final Random random = new Random();
-
     private static final int MAX_NUMBER = 10;
+    private final Random random = new Random();
 
     @Override
     public String getInstruction() {

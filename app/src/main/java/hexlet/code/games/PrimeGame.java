@@ -5,10 +5,9 @@ import java.util.Random;
 
 public final class PrimeGame implements Game {
 
-    private final Random random = new Random();
-
     private static final int MIN_NUMBER = 2;
     private static final int MAX_NUMBER = 100;
+    private final Random random = new Random();
 
     @Override
     public String getInstruction() {

@@ -12,14 +12,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 checkstyle {
     toolVersion = "10.12.5"
-    //isIgnoreFailures = false
+    isIgnoreFailures = false
 }
 
 application {
